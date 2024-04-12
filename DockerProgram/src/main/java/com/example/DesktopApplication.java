@@ -46,6 +46,7 @@ public class DesktopApplication extends Application {
     public void start(Stage primaryStage) {
         primaryStage.setTitle("Docker Cluster Management");
         this.primaryStage = primaryStage;
+        primaryStage.setFullScreen(true);
         VBox root = new VBox(); // Use VBox for vertical layout
         root.setAlignment(Pos.TOP_LEFT);
         root.setSpacing(10); // Spacing between components
@@ -55,10 +56,11 @@ public class DesktopApplication extends Application {
         Text titleText = new Text("DOCKER CLUSTER MANAGEMENT");
         titleText.setFont(Font.font("Arial", FontWeight.BOLD, 24)); // Bold 24pt font
         titleText.setFill(Color.DARKBLUE);
+        titleText.setEffect(new javafx.scene.effect.DropShadow(10, Color.WHITE));
 
         // Load the background image
         Image backgroundImage = new Image(
-                "https://blog.redigit.es/wp-content/uploads/2019/08/tecnologias-virtualizacion-contenedores-imagen-contenido-7-blog-redigit.jpg");
+                "https://www.docker.com/wp-content/uploads/2023/06/meta-image-play-with-docker-1110x580.png");
 
         // Set the background image to the root
         root.setBackground(new Background(new BackgroundImage(
@@ -94,19 +96,19 @@ public class DesktopApplication extends Application {
     private Label createMenuLabel() {
         Label menuLabel = new Label(
                 "--We provide you the menu to select the state that you prefer--\n" +
-                        "1.Create a container and check the list with the status with an optional id\n" +
+                        "1.Create a container and check the status list with an optional id\n" +
                         "2.Start-Stop-Execute a container based on id\n" +
                         "3.Combination of containers and images\n" +
                         "4.Conduct actions in Images\n" +
-                        "5.Monitoring Container-Create a bar chart with the statistics\n" +
-                        "6.Connect with the database of your choice to insert the measurements\n" +
-                        "7.Rest API for the handling of containers\n" +
+                        "5.Monitoring Containers & Create a bar chart with the statistics\n" +
+                        "6.Connect with a database of your choice and insert measurements\n" +
+                        "7.Handling containers with Rest API\n" +
                         "8.Exit\n" +
                         "Enter your choice: ");
         menuLabel.setStyle(
                 "-fx-text-fill: white; " +
-                        "-fx-font-size: 16; " +
-                        "-fx-effect: dropshadow(three-pass-box, darkblue, 10, 0, 0, 0);");
+                        "-fx-font-size: 18; " +
+                        "-fx-effect: dropshadow(three-pass-box, darkblue, 12, 0, 0, 0);");
         return menuLabel;
     }
 
