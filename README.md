@@ -31,10 +31,8 @@ CREATE TABLE MeasurementData (
 This is necessary for the user to succesfully connect with the database and insert these measurements.To connect with the database he/she will give his/her personal information like url-username-passward.If all goes well, he/she will receive a message that he/she was connected to the database otherwise that was failed.
 For the ending in selection 7 we provide the chance to get the measurments of the table MeasurementData after of inserting two dates(start-stop). The user gets the measurements which wants based on them.Also he/she can do actions like start-stop in a container after from question. TO close the program, the omly thing needed is to press option 8. 
 
-## 4. Structure of Our Repository
-We use the DockerEx repository for collaboration and file uploads. The main branch contains classes executed on Windows, and a separate branch is dedicated to files compatible with macOS.
-We create a folder demo which contains other folders for our final files. In folder DockerEx/demo/src/main/com
-/example we conclude the final files.
+## 4. Structure of the Repository
+This repository contains the folder src which has the main classes of this application and a folder test for the testing of the code 
 
 ## 5.UML DIAGRAM
 ![UML DIAGRAM](https://github.com/NikosLaspias/DockerEx/blob/main/uml%20(1).drawio.png)
